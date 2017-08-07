@@ -1,0 +1,195 @@
+html{
+  height: 100%;
+}
+body{
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+input {
+  padding: 0;
+}
+container  {
+  display: block;
+  background: url('../imgs/get_bg.png');
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .card {
+    margin: 0 auto;
+    margin-top: 50 /75rem;
+    width: 683 /75rem;
+    height: 1058 /75rem;
+    .cards {
+      float: left;
+      margin-bottom: 30 /75rem;
+      width: 325 /75rem;
+      height: 241 /75rem;
+      border-radius: 5 /75rem;
+      overflow: hidden;
+      transition: all 0.8s ease-in-out;
+      img {
+        width: 325 /75rem;
+        height: 241 /75rem;
+      }
+    }
+    .left {
+      margin-right: 33 /75rem;
+    }
+  }
+  .bind {
+    position: fixed;
+    top: 160 / 75rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 608 /75rem;
+    height: 830 /75rem;
+    .title {
+      background-image: url('../imgs/logo.png');
+      margin: 0 auto;
+      width: 536 /75rem;
+      height: 105 /75rem;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .inp {
+      margin-top: 192 / 75rem;
+      width: 608 /75rem;
+      height:306 /75rem;
+      background-color: #ffffff;
+      border-radius: 8 /75rem;
+    }
+    .iphone {
+      margin: 47 / 75rem 0 47 / 75rem 56 /75rem;
+      width: 300 / 74rem;
+      height: 60 / 75rem;
+      font-size: 36 / 75rem;
+      border-style: none;
+      outline: none;
+    }
+    .but {
+      margin-top: 47 / 75rem;
+      margin-right: 50 / 75rem;
+      float: right;
+      width: 150 / 75rem;
+      height: 60 / 75rem;
+      border: 1 / 75rem solid #2bdecb;
+      background-color: #ffffff;
+      font-size: 20 / 75rem;
+      color: #2bdecb;
+      border-radius: 8 /75rem;
+      outline: 0;
+      -webkit-appearance: none; //兼容ios
+    }
+    .line {
+      width: 511 / 75rem;
+      height:1 / 75rem;
+      background-color: #dcdcdc;
+      margin: 0 auto;
+    }
+    .verification {
+      width: 511 / 75rem;
+      height: 60 / 75rem;
+      border-style: none;
+      font-size: 36 / 75rem;
+      margin-top:  40 / 75rem;
+      margin-left: 56 / 75rem;
+      outline: none;
+
+    }
+    .push {
+      margin-top: 110 / 75rem;
+      height: 121 / 75rem;
+      background-color: #ffd940; 
+      text-align: center;
+      font-size: 40 / 75rem;
+      width: 100%;
+      border: none;
+      border-radius: 8 / 75rem;
+      color: #ffffff;
+      outline: 0;
+      -webkit-appearance: none; //兼容ios
+    }
+  }
+}
+.vague {
+  -webkit-filter: blur(20px);   
+  -moz-filter: blur(20px);   
+  -ms-filter: blur(20px);   
+  -o-filter: blur(20px);   
+  filter: blur(20px);   
+}
+.vague-del {
+  -webkit-filter: blur(0px);   
+  -moz-filter: blur(0px);   
+  -ms-filter: blur(0px);   
+  -o-filter: blur(0px);   
+  filter: blur(0px);   
+}
+.imgs {
+  opacity: 0;
+}
+.img-animation {
+  animation: .5s fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.success {
+  margin: 0 auto;
+  margin-top: 222 /75rem;
+  width: 608 /75rem;
+  height: 587 /75rem;
+}
+.message {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcc;
+  z-index: 10;
+  opacity: 0.5;
+  span {
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 320 /75rem;
+    height: 100 /75rem;
+    line-height: 100 /75rem;
+    text-align: center;
+    background-color: #000;
+    font-size: 32 /75rem;
+    color: #fff;
+    border-radius: 20 /75rem;
+    outline: 0;
+  }
+}

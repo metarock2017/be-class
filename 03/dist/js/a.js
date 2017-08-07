@@ -1,0 +1,1 @@
+function foo(o){console.log(o)}foo(2);

@@ -1,0 +1,194 @@
+html {
+  height: 100%;
+}
+body {
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+input {
+  padding: 0;
+}
+container {
+  display: block;
+  background: url('../imgs/get_bg.png');
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+container .card {
+  margin: 0 auto;
+  margin-top: 0.66666667rem;
+  width: 9.10666667rem;
+  height: 14.10666667rem;
+}
+container .card .cards {
+  float: left;
+  margin-bottom: 0.4rem;
+  width: 4.33333333rem;
+  height: 3.21333333rem;
+  border-radius: 0.06666667rem;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+}
+container .card .cards img {
+  width: 4.33333333rem;
+  height: 3.21333333rem;
+}
+container .card .left {
+  margin-right: 0.44rem;
+}
+container .bind {
+  position: fixed;
+  top: 2.13333333rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 8.10666667rem;
+  height: 11.06666667rem;
+}
+container .bind .title {
+  background-image: url('../imgs/logo.png');
+  margin: 0 auto;
+  width: 7.14666667rem;
+  height: 1.4rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+container .bind .inp {
+  margin-top: 2.56rem;
+  width: 8.10666667rem;
+  height: 4.08rem;
+  background-color: #ffffff;
+  border-radius: 0.10666667rem;
+}
+container .bind .iphone {
+  margin: 0.62666667rem 0 0.62666667rem 0.74666667rem;
+  width: 4.05405405rem;
+  height: 0.8rem;
+  font-size: 0.48rem;
+  border-style: none;
+  outline: none;
+}
+container .bind .but {
+  margin-top: 0.62666667rem;
+  margin-right: 0.66666667rem;
+  float: right;
+  width: 2rem;
+  height: 0.8rem;
+  border: 0.01333333rem solid #2bdecb;
+  background-color: #ffffff;
+  font-size: 0.26666667rem;
+  color: #2bdecb;
+  border-radius: 0.10666667rem;
+  outline: 0;
+  -webkit-appearance: none;
+}
+container .bind .line {
+  width: 6.81333333rem;
+  height: 0.01333333rem;
+  background-color: #dcdcdc;
+  margin: 0 auto;
+}
+container .bind .verification {
+  width: 6.81333333rem;
+  height: 0.8rem;
+  border-style: none;
+  font-size: 0.48rem;
+  margin-top: 0.53333333rem;
+  margin-left: 0.74666667rem;
+  outline: none;
+}
+container .bind .push {
+  margin-top: 1.46666667rem;
+  height: 1.61333333rem;
+  background-color: #ffd940;
+  text-align: center;
+  font-size: 0.53333333rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.10666667rem;
+  color: #ffffff;
+  outline: 0;
+  -webkit-appearance: none;
+}
+.vague {
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter: blur(20px);
+  filter: blur(20px);
+}
+.vague-del {
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+}
+.imgs {
+  opacity: 0;
+}
+.img-animation {
+  animation: .5s fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.success {
+  margin: 0 auto;
+  margin-top: 2.96rem;
+  width: 8.10666667rem;
+  height: 7.82666667rem;
+}
+.message {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcc;
+  z-index: 10;
+  opacity: 0.5;
+}
+.message span {
+  position: absolute;
+  display: block;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 4.26666667rem;
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  text-align: center;
+  background-color: #000;
+  font-size: 0.42666667rem;
+  color: #fff;
+  border-radius: 0.26666667rem;
+  outline: 0;
+}
