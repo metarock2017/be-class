@@ -1,6 +1,6 @@
 ## 第四次课件
 + REST API
-
++ mysql
 
 #### REST API ( (资源) 表现层状态转化 API)
 > 说的通俗一点，改变url写法，让它带有状态，即语义化
@@ -67,6 +67,13 @@ HTTP 动词
 <td>DELETE</td>
 <td>DELETE</td>
 </tr></tbody></table>
+
+#### mysql
+
++ select
++ update
++ delete
++ insert
 
 ## 作业和下次课一起
 
