@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>chat</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font: 13px Helvetica, Arial;
+    }
+
+    form {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    form input {
+        border: 0;
+        padding: 10px;
+        width: 90%;
+        margin-right: .5%;
+    }
+
+    form button {
+        width: 9%;
+        background: pink;
+        border: none;
+        padding: 10px;
+    }
+
+    #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #messages li {
+        padding: 5px 10px;
+    }
+
+    #messages li:nth-child(odd) {
+        background: #eee;
+    }
+    </style>
+</head>
+
+<body>
+    <ul id="messages"></ul>
+    <form action="">
+        <input id="input" autocomplete="off" />
+        <button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+    /*$(function() {
+        var socket = io();
+        $('form').submit(function() {
+                socket.emit('chat message', $('#input').val());
+                $('#input').val('');
+                return false;
+            });
+
+        
+
+    })*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $(function() {
+
+            var socket = io();
+
+            $('form').submit(function() {
+                socket.emit('chat message', $('#input').val());
+                $('#input').val('');
+                return false;
+            });
+
+            socket.on('chat message', function(msg) {
+                $('#messages').append($('<li>').text(msg));
+            });
+        });
+
+
+
+    // window.onload = function() {
+    //     var socket = io();
+    //     var messages = document.querySelector('#messages');
+    //     var form = document.querySelector('form');
+    //     var input = document.querySelector('#m');
+    //     var button = document.querySelector('button');
+
+    //     button.addEventListener('click', function() {
+    //         socket.emit('chat massage', input.value);
+    //         return false;
+    //         //alert(input.value);
+    //         input.value = '';
+    //         return false;
+    //         alert(233);
+    //     });
+
+
+    //     socket.on('chat massge', function(msg) {
+    //      alert(msg);
+    //         var newMassage = document.createElement('li');
+    //         newMessage.innerHTML = msg;
+    //         massages.appendChild(newMassage);
+    //     });
+    // }
+    </script>
+</body>
+
+</html>
