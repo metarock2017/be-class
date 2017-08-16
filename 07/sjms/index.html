@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 800px;
+        }
+        #container div{
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id='container'></div>
+</body>
+</html>
+<script>
+
+// 1.工厂模式  
+
+
+// var Basktball = function() {
+//     this.intro = 'kobe';
+// }
+// Basktball.prototype = {
+//     getMember: function() {
+//         console.log('4');
+//     },
+//     getIntro: function() {
+//         console.log(this.intro);
+//     }
+// }
+// var Football = function() {
+//     this.intro = 'C罗';
+// }
+// Football.prototype = {
+//     getMember: function() {
+//         console.log('12');
+//     },
+//     getIntro: function() {
+//         console.log(this.intro);
+//     }
+// }
+// function Factory(type) {
+//     switch(type){
+//         case 'Basketball':
+//             return new Basktball();
+//         case 'Football' :
+//             return new Football();
+//     }
+// }
+
+// Factory('Basketball').getIntro();
+
+
+//工厂模式的基本应用
+//实现功能 需要哪一种语言 就在container中添加哪一种语言
+
+
+
+
+// var Java = function(content) {
+//     this.content = content;
+//     (function(content){
+//         var div = document.createElement('div');
+//         div.innerHTML = content;
+//         div.style.color = 'green',
+//         document.getElementById('container').appendChild(div);
+//     })(content)
+// }
+
+// var Php = function(content) {
+//     this.content = content;
+//     (function(content){
+//         var div = document.createElement('div');
+//         div.innerHTML = content;
+//         div.style.color = 'yellow',
+//         document.getElementById('container').appendChild(div);
+//     })(content)
+// }
+
+// function Factory(type,content) {
+//     switch(type) {
+//         case 'Java': 
+//             return new Java(content);
+//         case 'Php' : 
+//             return new Php(content);
+//     }
+// }
+
+// Factory('Java','java很好');
+// Factory('Php','php是世界上最好的语言');
+
+
+//抽象工厂模式
+
+// function People(b) {
+//     var x = new People[b];
+//     console.log(x.name);
+//     x.getName();
+// }
+
+
+// People.a = function() {
+//     this.name = 'llp';
+// }
+// People.a.prototype = {
+//     getName: function() {
+//         console.log('idsbllp');
+//     }
+// }
+// People('a');
+
+
+// var inheritFactory = function(subType,superType) {
+//     if(typeof inheritFactory[superType] === 'function') {
+//         function F() {};
+//         F.prototype = new inheritFactory[superType];
+//         subType.constructor = subType;
+//         subType = new F();
+//     }else{
+//         return 'please创建该类';
+//     }
+// }
+
+// inheritFactory.Car= function () {
+//     this.type = 'car';
+// }
+// inheritFactory.Car.prototype = {
+//     getPrice : function(){
+//         throw  new Error('未创建该抽象类');
+//     },
+//     getSpeed : function () {
+//         throw new Error('未创建该抽象类');
+//     }
+// }
+
+// var BMW = function (price, speed) {
+//     this.price = price;
+//     this.speed = speed;
+// }
+// inheritFactory(BMW,'Car');
+// BMW.prototype.getPrice = function () {
+//     return this.price;
+// }
+// BMW.prototype.getSpeed = function () {
+//     return this.speed;
+// }
+// var bmw = new BMW(1000,100);
+// console.info(bmw.getSpeed());
+// console.info(bmw.getPrice());
+
+// BMW.prototype.getType = function () {
+//     return this.type;
+// }
+// console.log(bmw.getType());
+
+
+
+
+
+
+
+
+
+
+//建造者模式
+//通过需求给出对象
+
+// var Car = function(param) {
+//     this.speed = param.speed;
+//     this.price = param.price;
+// }
+
+// Car.prototype = {
+//     getSpeed: function() {
+//         return this.speed;
+//     },
+//     getPrice: function() {
+//         return this.price;
+//     }
+// }
+
+// var brands = function(feature) {
+//     var that = this;
+//     (function(special,that) {
+//         switch(feature) {
+//             case 'quick':
+//                 that.brands = 'bwm';
+//             case 'expensive':
+//                 that.brands = '兰博基尼';
+//         }
+//     })(feature,that);
+// }
+
+// brands.prototype.changeBrand = function(brands) {
+//     this.brands = brands;
+// }
+
+// var Person = function(feature,spd,prc) {
+//     var _person = new Car({speed:spd,price:prc});
+//     _person.brands = new brands(feature);
+//     return _person;
+// }
+
+// var llp = Person('expensive',200,300);
+// console.log(llp.brands);
+// console.log(llp.speed);
+// llp.brands.changeBrand('奔驰');
+// console.log(llp.brands);
+
+
+
+
+
+
+
+// 单例模式
+function g(id) {
+    return document.getElementById(id);
+}
+
+function css(id,key,value) {
+    g(id).style[key] = value;
+}
+
+function on(id,type,fn){
+    g(id).addEventListener(type,fn);
+}
+
+// 命名空间
+ 
+var psx = {
+    g: function(id) {
+        return document.getElementById(id);        
+    },
+    css: function(id,key,value){
+        this.g(id).style[key] = value;   
+    }
+}
+
+// 模块化  明确每一个模块的功能  框架
+
+var A = {
+    Ajax:{
+        get:function(){
+
+        },
+        post:function(){}
+    },
+    Tool:{
+        tool1:function(){
+            
+        },
+        tool2:function(){
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// function prototypeExtend() {
+//     var args = arguments,
+//         F = function(){},
+//         len = args.length;
+
+//     for(var i = 0 ; i < len ; i++){
+//         for(var j in args[i]){
+//             F.prototype[j] = args[i][j];
+//         }
+//     }
+//     return new F();
+// }
+
+// var a = prototypeExtend({
+//     name: 'kjj',
+//     age: 20
+// },{
+//     work: 'student'
+// })
+
+// console.log(a);
+
+
+
+
+</script>
