@@ -64,7 +64,8 @@
     /*$(function() {
         var socket = io();
         $('form').submit(function() {
-                socket.emit('chat message', $('#input').val());
+                socket.emit('
+                chat message', $('#input').val());
                 $('#input').val('');
                 return false;
             });
@@ -72,38 +73,6 @@
         
 
     })*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     $(function() {
 
@@ -116,36 +85,38 @@
             });
 
             socket.on('chat message', function(msg) {
+                alert(msg)
                 $('#messages').append($('<li>').text(msg));
             });
         });
 
 
 
-    // window.onload = function() {
-    //     var socket = io();
-    //     var messages = document.querySelector('#messages');
-    //     var form = document.querySelector('form');
-    //     var input = document.querySelector('#m');
-    //     var button = document.querySelector('button');
+ // function q() {
+ //        var socket = io();
+ //        var messages = document.querySelector('#messages');
+ //        var form = document.querySelector('form');
+ //        var input = document.querySelector('#m');
+ //        var button = document.querySelector('button');
 
-    //     button.addEventListener('click', function() {
-    //         socket.emit('chat massage', input.value);
-    //         return false;
-    //         //alert(input.value);
-    //         input.value = '';
-    //         return false;
-    //         alert(233);
-    //     });
+ //        button.addEventListener('click', function() {
+ //            socket.emit('chat massage', input.value);
+ //            // return false;
+ //            // alert(input.value);
+ //            // input.value = '';
+ //            return false;
+ //            // alert(233);
+ //        });
 
 
-    //     socket.on('chat massge', function(msg) {
-    //      alert(msg);
-    //         var newMassage = document.createElement('li');
-    //         newMessage.innerHTML = msg;
-    //         massages.appendChild(newMassage);
-    //     });
-    // }
+ //        socket.on('chat massge', function(msg) {
+ //         alert(msg);
+ //            var newMassage = document.createElement('li');
+ //            newMessage.innerHTML = msg;
+ //            massages.appendChild(newMassage);
+ //        });
+ //    }
+ //    q()
     </script>
 </body>
 
