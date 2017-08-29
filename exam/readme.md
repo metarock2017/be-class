@@ -21,7 +21,7 @@
 + API 遵循 RESTFUl 规范
 
 #### 前端
-+ less 或者 sass
++ le ss 或者 sass
 + 原生 js, 不准用任何框架和库
 + 小图标用你喜欢的优化方式 (iconfont, sprite, base64)
 + es6
